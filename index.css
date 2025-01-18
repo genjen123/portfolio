@@ -1,0 +1,75 @@
+:root {
+    --mainColor: #4E8287;
+    --secondaryColor: #3F6A8D;
+    --accentLightGray: #CCCCCC;
+    --accentDarkGray: #717070;
+    --black: #353535;
+    --white: #F5F5F5;
+}
+
+.epilogue-headers {
+  font-family: "Epilogue", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.darker-grotesque-main {
+  font-family: "Darker Grotesque", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: "Darker Grotesque", serif;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Epilogue", serif;
+}
+
+div.header_container h1 {
+    font-size: 6em;
+    margin-bottom: 0.5rem;
+    color: var(--mainColor);
+}
+
+div.header_container h5 {
+    margin-top: 0.5rem;
+    font-size: 0.6em;
+    letter-spacing: 0.3px;
+    color: var(--black)
+}
+
+div.container {
+    font-size: 1.1em;
+    margin: 3rem 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    column-gap: 5%;
+}
+
+.f_left {
+    font-weight: bold;
+    width: 5%;
+    color: var(--secondaryColor);
+}
+
+.f_right {
+    width: 80%;
+    color: var(--black);
+}
+.f_right span {
+    color: var(--mainColor);
+    font-weight: 500;
+}
