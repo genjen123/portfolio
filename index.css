@@ -21,6 +21,7 @@
   font-style: normal;
 }
 
+/* --------------- OVERRIDES --------------- */
 body {
     font-family: "Darker Grotesque", serif;
     padding: 1rem;
@@ -32,6 +33,42 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Epilogue", serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1100px) {
+    div.container div.column {
+        width: 100% !important;
+    }
+
+    hr.divider {
+        display: block !important;
+        width: calc(50%);
+        height: 0px !important;
+    }
+
+    div.block-tile {
+        width: calc(100% - 50px) !important;
+    }
+    div.block-tile div.row {
+        width: 100% !important;
+    }
+}
+
+/* --------------- BODY --------------- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    column-gap: 5%;
+}
+
 div.header_container h1 {
     font-size: 6em;
     margin-bottom: 0.5rem;
@@ -41,35 +78,65 @@ div.header_container h1 {
 div.header_container h5 {
     margin-top: 0.5rem;
     font-size: 0.6em;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     color: var(--black)
 }
 
 div.container {
     font-size: 1.1em;
     margin: 3rem 0;
+    align-items: flex-end;
+    column-gap: 20px;
 }
 
-.row {
+.column {
     display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    column-gap: 5%;
+    flex-direction: column;
 }
+
+div#col-about { width: 35%; }
+div#col-about .row { align-items: flex-start; }
+
+div#col-divider { margin-right: 20px; }
+
+div#col-experiences h4 { 
+    color: var(--secondaryColor);
+    margin-bottom: 10px;
+}
+div#col-experiences div.block-tile div h6 { color: var(--mainColor); }
 
 .f_left {
     font-weight: bold;
-    width: 5%;
     color: var(--secondaryColor);
 }
 
 .f_right {
-    width: 80%;
+    width: 85%;
     color: var(--black);
 }
 .f_right span {
     color: var(--mainColor);
     font-weight: 500;
 }
+
+hr.divider {
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid var(--accentLightGray);
+}
+
+div.block-tile {
+    width: 100%;
+    align-items: center;
+    /* border: 1px solid var(--accentDarkGray); */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 0;
+}
+div.block-tile div.row {
+    width: 70%;
+    align-items: baseline;
+    margin-bottom: 0;
+}
+div.block-tile div.row h6 { margin-bottom: 2px; }
+div.block-tile div.row p { margin-top: 0px; }
